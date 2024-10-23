@@ -14,12 +14,12 @@ if CURRENT_PYTHON < REQUIRED_PYTHON:
 ==========================
 Unsupported Python version
 ==========================
-This version of Requests requires at least Python {}.{}, but
+This version of Couriers Wrapper requires at least Python {}.{}, but
 you're trying to install it on Python {}.{}. To resolve this,
 consider upgrading to a supported Python version.
 
 If you can't upgrade your Python version, you'll need to
-pin to an older version of Requests (<2.32.0).
+pin to an older version of Couriers Wrapper (<2.32.0).
 """.format(
             *(REQUIRED_PYTHON + CURRENT_PYTHON)
         )
@@ -50,7 +50,7 @@ test_requirements = [
 
 about = {}
 here = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(here, "src", "requests", "__version__.py"), "r", "utf-8") as f:
+with open(os.path.join(here, "src", "couriers_wrapper", "__version__.py"), "r", "utf-8") as f:
     exec(f.read(), about)
 
 with open("README.md", "r", "utf-8") as f:
@@ -65,7 +65,7 @@ setup(
     author=about["__author__"],
     author_email=about["__author_email__"],
     url=about["__url__"],
-    packages=["requests"],
+    packages=["couriers_wrapper"],
     package_data={"": ["LICENSE", "NOTICE"]},
     package_dir={"": "src"},
     include_package_data=True,
@@ -101,7 +101,7 @@ setup(
         "use_chardet_on_py3": ["chardet>=3.0.2,<6"],
     },
     project_urls={
-        "Documentation": "https://requests.readthedocs.io",
-        "Source": "https://github.com/psf/requests",
+        "Documentation": "https://couriers-wrapper.readthedocs.io/",
+        "Source": "https://github.com/GabrieleCorio/couriers-wrapper",
     },
 )
